@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+
+    <style>
+        /* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.row {
+  margin-bottom: 20px;
+}
+
+/* Header Styles */
+.abroad-title {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.abroad-description {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Typography Styles */
+h1, h2, h3 {
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+  .eq {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .eq {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 992px) {
+  .eq {
+    font-size: 32px;
+  }
+}
+
+    </style>
+    <title>Document</title>
+</head>
+<body class="bg-dark text-light">
+
+
+
+
+
+    <!-- nav -->
+    <nav class="bg-gray-800">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div class="relative flex h-16 items-center justify-between">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <!-- Mobile menu button-->
+              <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                <span class="absolute -inset-0.5"></span>
+                <span class="sr-only">Open main menu</span>
+                <!--
+                  Icon when menu is closed.
+      
+                  Menu open: "hidden", Menu closed: "block"
+                -->
+                <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+                <!--
+                  Icon when menu is open.
+      
+                  Menu open: "block", Menu closed: "hidden"
+                -->
+                <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+              <div class="flex flex-shrink-0 items-center">
+                <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
+              </div>
+              <div class="hidden sm:ml-6 sm:block">
+                <div class="flex space-x-4">
+                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                  <a href="/" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">ADA Abroad</a>
+                  <a href="/about" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About</a>
+                  <a href="/feestructure" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Fee Structure</a>
+                  <a href="/submit_form" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contact</a>
+                </div>
+              </div>
+            </div>
+            <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              <button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                <span class="absolute -inset-1.5"></span>
+                <span class="sr-only">View notifications</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+          <div class="space-y-1 px-2 pb-3 pt-2">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <a href="/" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">ADA Abroad</a>
+            <a href="/about" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">About</a>
+            <a href="/feestructure" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Fee Structure</a>
+            <a href="/submit_form" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Contact</a>
+          </div>
+        </div>
+      </nav>
+      
+      
+<br>
+<div class="row">
+    <div class="col-span-12 md:col-span-12 lg:col-span-12 abroad-text-wrapper">
+       <div >
+        <h2 class="text-4xl font-extrabold dark:text-white">Study MBBS in Abroad</h2>
+          <br>
+       </div>
+   
+       <div class="abroad-description">
+    <p>The admission process in the field of MBBS in India has undergone various changes and reforms in the past couple of years. Considering the participation it receives and the competition, which is very vast and diverse, obtaining a degree in Bachelor of Medicine, Bachelor of Surgery (MBBS) is not the easiest task, and students are often seen grasping at straws.</p>
+     <p>In such dire straits, it becomes important to have a mentor, a consultant, or an advisor who can guide students and help them get the best outcome for themselves.</p>
+     <strong>In India, the process of admission for the course of MBBS is done through various steps. These steps are as follows:</strong>
+     <ul><li><span data-preserver-spaces="true">Throughout India, there is a single national level exam which is conducted. This is known as NEET.</span></li><li><span data-preserver-spaces="true">NEET is conducted under the aegis of NTA or National Testing Agency, on a year to year basis.</span></li><li>No separate state level or university level exams are conducted.</li><li>For every university, be it a private university or government-run university, the admission for the course of MBBS is done solely based on the scores received in the NEET exam.</li><li>Candidates fill in their preferential college names, at the time of filling up the NEET forms.</li><li>Colleges are then allocated to them based on their scores and their preferences.</li><li>NEET is conducted on a yearly basis that allows candidates to pursue undergraduate in the field of medicine, both in India and to <strong><span data-preserver-spaces="true">study MBBS abroad</span></strong><span data-preserver-spaces="true">.&nbsp;</span></li></ul>
+     <p>Since the level of competition is very high and approximately around 22 students fight for a single seat in MBBS admission in India, the second-best option they have for themselves is to&nbsp;<strong><span data-preserver-spaces="true">study MBBS abroad</span></strong><span data-preserver-spaces="true">. The fact that there are no entry-level examinations required to make an admission other than NEET and they are also most cost-efficient, studying MBBS abroad is preferred by many.</span></p>
+     <p>When one thinks about going abroad to pursue a career, they often find themselves in a lot of dilemmas. There are many questions to which they need answers. Going abroad and studying abroad requires a lot of work, documentation, and attention to detail.</p>
+     <p>When the course is as challenging as medicine, it requires all the more attention. In such situations, approaching consultancies like Vishwa Medical Admission Point is the best one can do. They help and support candidates, right from the first step of application filling to admission. They help in making the students decide which college they would like to go for and in which country. They work to help students pursue their dream of obtaining an MBBS degree and having a quality of life, all under their budget.</p>
+     <p>After the completion of the MBBS degree, they also facilitate students throughout the process of postgraduate admission in the field of medicine in colleges both in India and across the world.</p>
+       </div>
+       <div class="abroad-title">
+      <h1 class="eq">Career Counseling</h1>
+</div>
+<div class="abroad-description">
+<p>Vishwa Medical Admission Point aims at solving problems for a student when it becomes quite overwhelming for them to choose a college which may be up to their choice and distinction</p>
+<p>With the career counseling program which has some of the most experienced and renowned group of counselors, they intend to resolve any query of a student and help them in choosing a career option out of the plethora of options they have, along with the country and college that will provide the students the best facilities.</p>
+<p>Vishwa Medical Admission Point acts as a great source of help and guidance for students who lack the battle to choose a career option which may be the most appropriate one for them. They go through a set of procedures before finally letting the candidate know the best suitable career option for them. After that, they further the candidate into also choosing the best college for the course they would like to pursue.</p>
+</div>
+<div class="abroad-title">
+      <h1 class="eq">University Selection</h1>
+</div>
+<div class="abroad-description">
+<p>In many cases, even though the career has been decided, students usually fail to find a college that matches up to their caliber. Vishwa Medical Admission Point helps in giving the students, multiple options of universities wherein they get the chance to study MBBS either in India or <strong><span data-preserver-spaces="true">study MBBS in abroad</span></strong><span data-preserver-spaces="true">&nbsp;countries.</span></p>
+<p>Out of the hundred universities present all across the globe, only the top ones that match with the caliber and merit of the students are allotted to them.</p> 
+<strong>Apart from all this, Vishwa Medical Admission Point also assists the students in the following categories:</strong>
+<ul><li>Admission Assistance</li><li>Finance Assistance</li><li>Visa Assistance</li><li>Forex Assistance</li><li>Pre Departure Assistance</li></ul>
+
+</div>
+<div class="abroad-title">
+      <h1 class="eq">Procedure to Study MBBS Abroad</h1>
+</div>
+<div class="abroad-description">
+<p>Vishwa Medical Admission Points as one of the best<strong> study MBBS abroad consultants</strong> that help students in understanding the basic steps and procedures it requires out of them to pursue MBBS, in the university, they desire, in an acceptable manner. Here are a few important procedures, a candidate is expected to follow:</p>
+<ul><li>The Minimum Eligibility Criterion should be satisfied. Every country has its own different sets of eligibility criteria. It is important to keep a note of them and make sure that the criteria are satisfied and fulfilled.</li><li>The passport should be ready with all the correct details and personal information.</li><li>After choosing the university, the invitation letter should be obtained by using the valid documents of proof and different marksheets.</li><li>Different documents such as Visa, medical insurance, MCI eligibility certificate, should be completed.</li></ul>
+</div>
+<div class="abroad-title">
+      <h1 class="eq">Scholarships To Study MBBS Abroad</h1>
+</div>
+<div class="abroad-description">
+<p>Scholarships are a great way to give financial boosts to students. Scholarships are a form of award, given in the form of financial aid, to facilitate the cost of studying in abroad countries. It reduces the burden of payment and finance from a student and helps them in covering debts and loans as well. Since MBBS is a comparatively expensive course, scholarships are a great way to assist a candidate in pursuing it without any burden or load.</p>
+<p>Here are a few scholarships offered to <strong>study MBBS in abroad countries</strong>.</p>
+<strong>For the United Kingdom</strong>
+<ul><li>QMUL John Abernethy (Barts) Scholarship for Medicine</li><li>St Georges Medical Scholarships</li><li>University of Cambridge Graduate Course in Medicine Bursary</li><li>University of Glasgow Medical, Veterinary and Life Sciences Scholarships</li><li>King’s College London Social Science, Health and Medicine Bursaries</li></ul>
+<strong>For Europe</strong>
+<ul><li>Novo Nordisk Foundation Research Scholarships and Grants</li><li>Carl Duisberg Scholarships</li><li>University of Copenhagen Ph.D. Scholarships</li><li>AMC Amsterdam Merit Scholarships</li><li>Namaste India Scholarships</li></ul>
+<strong>For North America</strong>
+<ul><li>American College of Surgeons International Guest Scholarships</li><li>ASME Grants and Fellowships</li><li>AMA Minority Scholars Award</li><li>University of Calgary Cumming School of Medicine Awards</li><li>Edith SeVille Coale Scholarships</li></ul>
+<strong>For Australia</strong>
+<ul><li>University of Auckland John Hamel MacGregor Award in Medical Science</li><li>University of Wollongong Undergraduate Scholarship</li><li>AFPHM John Snow Scholarship</li><li>University of Melbourne Baillieu Research Scholarship</li><li>Kidney Health Australia Research Program</li></ul>
+</div>
+<div class="abroad-title">
+      <h1 class="eq">Factors for Choosing the best MBBS College</h1>
+</div>
+<div class="abroad-description">
+<p>There are certain factors which are imperative for a student to shed some light on and give importance to before deciding and finalizing the college they want to pursue MBBS from:</p>
+<ul><li>The total budget of the country and the college in comparison to the budget set to pursue the course. Also, if the total budget is worth the benefits arising out of it.</li><li>The process of admission and the eligibility criterion.</li><li>The international relations of the country with India and in case if there is any chance of conflict or clashing of ideas between them.</li><li>If the University is a national university or a government university.</li><li>If the University is approved by MCI / NMC and WHO.</li><li>The language of study of that particular university.</li><li>The facilities, infrastructure and services, faculty, and overall atmosphere provided by the university.</li><li>The location of the university from different local places in the city. The ease of communication.</li><li>Hostel availability and the overall quality of life in the country.</li></ul>
+<p>The best part about Vishwa Medical Admission Point is that they levy the stress of choosing the appropriate college from the shoulders of the student. Through multiple processes of counseling and marks evaluation, they help students into getting them admitted to the best medical college in the world, according to their caliber and strength in the subject.</p>
+</div>
+<div class="abroad-title">
+      <h1 class="eq">Advantages of Studying MBBS Abroad</h1>
+</div>
+<div class="abroad-description">
+<p>Studying abroad comes with its benefits. The pros of pursuing a career, outside one’s own country come with more benefits and advantages than what one can anticipate. Here are some of the benefits if one opts to <strong>Study MBBS in Abroad</strong> countries.</p>
+<ul><li>In India, out of the total number of applicants, only 5% get to qualify for a seat in any one of the medical colleges. On top of that, the private medical colleges that constitute more than half of the total medical colleges in India, the capitation fee is very steep. For such reasons, for any middle-class family, going for a college which is situated out of India is a financially more viable option.</li><li>There are no separate entrance exams for every college outside India, in other countries. Many colleges take admission through the NEET marks, and many have a different eligibility criterion.</li><li>The living cost is relatively cheaper in many countries outside India. Studying MBBS in European countries or Asian Countries are quite viable in terms of financial dependence and the cost of daily living.</li><li>Once a youth starts living outside the comfort of their own country, they become much more independent, both mentally and financially. They start developing as a person. They get more confident in facing different paths of life. They also strengthen their decision making capability.</li></ul>
+<p>Many scholarships can be obtained that help a student in clearing off any debts. They also take away the concern of a student from the areas of finance.</p>
+</div>
+<div class="abroad-title">
+      <h1 class="eq">Conclusion</h1>
+</div>
+<div class="abroad-description">
+<p>Vishwa Medical Admission Point has years of expertise in the area of medical education. They have been successful in helping students choose the right college at the right time, keeping in mind their merits and distinctions. They have always believed in the core values of ethics, excellence, and education that have made them pretty significant and successful. They have successfully recruited students to good medical colleges across the globe and have a high success rate. They represent over 785 universities across 20 countries and have been fortunate enough to be the number one medical education consultant in Maharashtra.</p>
+</div>
+ </div>
+</div>
+
+
+      
+
+      <!-- footer -->
+      <footer class="text-gray-400 bg-gray-900 body-font">
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+          <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span class="ml-3 text-xl">ADA Abroad</span>
+          </a>
+          <p class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4"> MBBS Abroad
+            <a href="https://twitter.com/knyttneve" class="text-gray-500 ml-1" target="_blank" rel="noopener noreferrer"></a>
+          </p>
+          <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+            <a class="text-gray-400">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-gray-400">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-gray-400">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-gray-400">
+              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                <circle cx="4" cy="4" r="2" stroke="none"></circle>
+              </svg>
+            </a>
+          </span>
+        </div>
+      </footer>
+
+      </body>
+      </html>

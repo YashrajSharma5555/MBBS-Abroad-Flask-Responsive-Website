@@ -66,5 +66,5 @@ def show():
     return render_template('show.html', contact = contact)    
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=80)
+    app.run(debug = False , host='0.0.0.0')
 
